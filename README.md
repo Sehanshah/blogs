@@ -18,7 +18,7 @@ To run the application in local
 	>**venv\Scripts\activate**
 	
    Linux Users, In Terminal type,
-	>**source venv\bin\activate**
+	>**source venv/bin/activate**
 
 6. You will find **(venv)** at the start of the prompt if it's activated
 
