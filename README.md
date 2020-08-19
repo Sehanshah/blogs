@@ -26,5 +26,6 @@ To run the application in local
 	>**pip install -r requirements.txt**
 
 8. After Installation, To start the server Run
-    >**python manage.py migrate
-    python manage.py runserver**
+    >**python manage.py migrate**
+    
+    >**python manage.py runserver**
