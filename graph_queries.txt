@@ -1,0 +1,86 @@
+mutation createComment {
+  createComment(input: {
+    text: "Sample comment",
+    author: "Comment1",
+    post: 1
+  }) {
+    ok
+    comment {
+      id
+      text
+      post {
+        id
+        title
+      }
+    }
+  }
+}
+
+mutation deleteComment{
+  deleteComment(id:2){
+    ok
+  }
+}
+
+query getPosts {
+  posts {
+    id
+    title
+    author
+    publishDate
+    commentSet {
+      id
+      text
+      author
+    }
+  }
+}
+
+query getPost {
+  post(id: 1) {
+    id
+    title
+    author
+    publishDate
+    commentSet {
+      id
+      text
+      author
+    }
+  }
+}
+
+mutation createPost {
+  createPost(input: {title: "Sam Post", description: "Sam Post Desc", author: "Sam"}) {
+    ok
+    post {
+      id
+      title
+      author
+      publishDate
+      commentSet {
+        id
+        text
+      }
+    }
+  }
+}
+
+mutation updatePost {
+  updatePost(id: 2, input: {
+    title: "Second Post",
+    description: "Second Post Desc",
+    author: "Second"}) {
+    ok
+    post {
+      id
+      title
+      author
+      publishDate
+      commentSet {
+        id
+        text
+      }
+    }
+  }
+}
